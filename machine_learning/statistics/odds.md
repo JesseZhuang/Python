@@ -20,7 +20,7 @@ $\displaystyle a:b=p_a:(1-p_a)$
 
 $\displaystyle p_a={\frac {a}{a+b}}$
 
-[wiki lesswrong odds ratio](https://wiki.lesswrong.com/wiki/Odds_ratio)
+[lesswrong wiki odds ratio](https://wiki.lesswrong.com/wiki/Odds_ratio)
 
 ## Log Odds
 
