@@ -21,6 +21,18 @@ $Recall = \frac{TP}{TP + FN} = \frac{1}{1 + 8} = 0.11$
 
 With the example above, the model predicts 2 of 100 positive. Recall is 0.11.
 
+## Accuracy
+
+$Accuracy = \frac{number of correct predictions}{total number of predictions}$
+
+For binary classification:
+
+$Accuracy = \frac{TP+ TN}{TP+TN+FP+FN}$
+
+With the example above, accuracy is 0.91.
+
+Accuracy alone doesn't tell the full story when you're working with a class-imbalanced data set, like this one, where there is a significant disparity between the number of positive and negative labels.
+
 ## Prevision and Recall
 
 Unfortunately, precision and recall are often in tension. That is, improving precision typically reduces recall and vice versa.
