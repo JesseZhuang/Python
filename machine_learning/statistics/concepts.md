@@ -1,3 +1,5 @@
+# Classification
+
 ## Precision
 
 What percentage of positive identifications was correct?
@@ -72,4 +74,8 @@ Precision is 0.75 (9/12) and recall is 0.82 (9/11).
 
 ## Classification: ROC Curve and AUC
 
-An ROC curve (receiver operating characteristic curve) is a graph showing the performance of a classification model at all classification thresholds.
+An ROC curve (receiver operating characteristic curve) is a graph showing the performance of a classification model at all classification thresholds. It plots TPR (recall, on y axis) vs. FPR (on x axis).
+
+An ROC curve plots TPR vs. FPR at different classification thresholds. Lowering the classification threshold classifies more items as positive, thus increasing both False Positives and True Positives. The following figure shows a typical ROC curve.
+
+![roc](ROCCurve.svg)
