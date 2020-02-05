@@ -97,6 +97,9 @@ by active learning (by developers of Spacy), text and image
     * Docker + Kubernetes
     * Kubeflow
     * [Polyaxon](https://polyaxon.com/) (paid features)
+### 2.3. DL Frameworks
+  * Unless having a good reason not to, use Tensorflow/Keras or PyTorch. <sup>[1](#fsdl)</sup>
+  * The following figure shows a comparison between different frameworks on how they stand for *"developement"* and *"production"*.
 
 ## References
 - https://github.com/alirezadir/Production-Level-Deep-Learning
