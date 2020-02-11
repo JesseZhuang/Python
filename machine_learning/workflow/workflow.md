@@ -99,7 +99,23 @@ by active learning (by developers of Spacy), text and image
     * [Polyaxon](https://polyaxon.com/) (paid features)
 ### 2.3. DL Frameworks
   * Unless having a good reason not to, use Tensorflow/Keras or PyTorch. <sup>[1](#fsdl)</sup>
-  * The following figure shows a comparison between different frameworks on how they stand for *"developement"* and *"production"*.
+  * The following figure shows a comparison between different frameworks on how they stand for *"development"* and *"production"*.
+### 2.4. Experiment management
+
+* Development, training, and evaluation strategy:
+  * Always start **simple**
+    * Train a small model on a small batch. Only if it works, scale to larger data and models, and hyperparameter tuning!
+  * Experiment management tools:
+  * [Tensorboard](https://www.tensorflow.org/tensorboard)
+      * provides the visualization and tooling needed for ML experimentation
+  * [Losswise](https://losswise.com/) (Monitoring for ML)
+  * [Comet](https://www.comet.ml/): lets you track code, experiments, and results on ML projects
+  * [Weights & Biases](https://www.wandb.com/): Record and visualize every detail of your research with easy collaboration
+  * [MLFlow Tracking](https://www.mlflow.org/docs/latest/tracking.html#tracking): for logging parameters, code versions, metrics, and output files as well as visualization of the results.
+    * Automatic experiment tracking with one line of code in python
+    * Side by side comparison of experiments
+    * Hyper parameter tuningß
+    * Supports Kubernetes based jobs
 
 ## References
 - https://github.com/alirezadir/Production-Level-Deep-Learning
