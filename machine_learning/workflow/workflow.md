@@ -116,7 +116,45 @@ by active learning (by developers of Spacy), text and image
     * Side by side comparison of experiments
     * Hyper parameter tuningß
     * Supports Kubernetes based jobs
+### 2.5. Hyperparameter Tuning
+  * Approaches:
+    * Grid search
+    * Random search
+    * Bayesian Optimization
+    * HyperBand (and ASHA)
+    * Population-based Training
 
+  * Platforms:
+    * [RayTune](http://tune.io/): Ray Tune is a Python library for hyperparameter tuning at any scale (with  a focus on deep learning and deep reinforcement learning). Supports any machine learning framework, including PyTorch, XGBoost, MXNet, and Keras.
+    * [Katib](https://github.com/kubeflow/katib): Kubernete's Native System   for Hyperparameter Tuning and Neural Architecture Search, inspired by   [Google vizier](https://static.googleusercontent.com/media/ research.google.com/ja//pubs/archive/  bcb15507f4b52991a0783013df4222240e942381.pdf) and supports multiple ML/DL   frameworks (e.g. TensorFlow, MXNet, and PyTorch).
+    * [Hyperas](https://maxpumperla.com/hyperas/): a simple wrapper around  hyperopt for Keras, with a simple template notation to define  hyper-parameter ranges to tune.
+    * [SIGOPT](https://sigopt.com/):  a scalable, enterprise-grade  optimization platform
+    * [Sweeps](https://docs.wandb.com/library/sweeps) from [Weights & Biases] (https://www.wandb.com/): Parameters are not explicitly specified by a   developer. Instead they are approximated and learned by a machine   learning model.
+    * [Keras Tuner](https://github.com/keras-team/keras-tuner): A hyperparameter tuner for Keras, specifically for tf.keras with TensorFlow 2.0.
+### 2.6. Distributed Training
+  * Data parallelism: Use it when iteration time is too long (both tensorflow and PyTorch support)
+    * [Ray Distributed Training](https://ray.readthedocs.io/en/latest/distributed_training.html)
+  * Model parallelism: when model does not fit on a single GPU
+  * Other solutions:
+    * Horovod
+## 3. Troubleshooting [TBD]
+
+## 4. Testing and Deployment
+### 4.1. Testing and CI/CD
+Machine Learning production software requires a more diverse set of test suites than traditional software:
+![testing](./testing.png)
+* Unit and Integration Testing:
+   * Types of tests:
+     * Training system tests: testing training pipeline
+     * Validation tests: testing prediction system on validation set
+     * Functionality tests: testing prediction system on few important examples
+* Continuous Integration: Running tests after each new code change pushed to the repo
+ * SaaS for continuous integration:
+    * [Argo](https://argoproj.github.io/): Open source Kubernetes native workflow engine for orchestrating parallel jobs (incudes workflows, events, CI and CD).
+    * [CircleCI](https://circleci.com/): Language-Inclusive Support, Custom Environments, Flexible Resource Allocation, used by instacart, Lyft, and StackShare.
+    * [Travis CI](https://travis-ci.org/)
+    * [Buildkite](https://buildkite.com/): Fast and stable builds, Open source agent runs on almost any machine and architecture, Freedom to use your own  tools and services
+    * Jenkins: Old school build system
 ## References
 - https://github.com/alirezadir/Production-Level-Deep-Learning
 
