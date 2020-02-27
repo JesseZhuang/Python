@@ -155,6 +155,44 @@ Machine Learning production software requires a more diverse set of test suites 
     * [Travis CI](https://travis-ci.org/)
     * [Buildkite](https://buildkite.com/): Fast and stable builds, Open source agent runs on almost any machine and architecture, Freedom to use your own  tools and services
     * Jenkins: Old school build system
+### 4.2. Web Depolyment
+  * Consists of a **Prediction System** and a **Serving System**
+      * Prediction System: Process input data, make predictions
+      * Serving System (Web server):
+        * Serve prediction with scale in mind
+        * Use REST API to serve prediction HTTP requests
+        * Calls the prediction system to respond
+  * Serving options:
+      * 1. Deploy to VMs, scale by adding instances
+      * 2. Deploy as containers, scale via orchestration
+          * Containers
+              * Docker
+          * Container Orchestration:
+              * Kubernetes (the most popular now)
+              * MESOS
+              * Marathon
+      * 3. Deploy code as a "serverless function"
+      * 4. Deploy via a **model serving** solution
+  * Model serving:
+      * Specialized web deployment for ML models
+      * Batches request for GPU inference
+      * Frameworks:
+         * Tensorflow serving
+         * MXNet Model server
+         * Clipper (Berkeley)
+         * SaaS solutions
+            * [Seldon](https://www.seldon.io/): serve and scale models built in any framework on Kubernetes
+            * [Algorithmia](https://algorithmia.com/)
+   * Decision making: CPU or GPU?
+      * CPU inference:
+         * CPU inference is preferable if it meets the requirements.
+         * Scale by adding more servers, or going serverless.
+      * GPU inference:
+         * TF serving or Clipper
+         * Adaptive batching is useful
+  * (Bonus) Deploying Jupyter Notebooks:
+      * [Kubeflow Fairing](https://github.com/kubeflow/fairing) is a hybrid deployment package that let's you deploy your *Jupyter notebook* codes!
+
 ## References
 - https://github.com/alirezadir/Production-Level-Deep-Learning
 
