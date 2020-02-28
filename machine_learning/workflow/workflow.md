@@ -163,16 +163,16 @@ Machine Learning production software requires a more diverse set of test suites 
         * Use REST API to serve prediction HTTP requests
         * Calls the prediction system to respond
   * Serving options:
-      * 1. Deploy to VMs, scale by adding instances
-      * 2. Deploy as containers, scale via orchestration
+      * Deploy to VMs, scale by adding instances
+      * Deploy as containers, scale via orchestration
           * Containers
               * Docker
           * Container Orchestration:
               * Kubernetes (the most popular now)
               * MESOS
               * Marathon
-      * 3. Deploy code as a "serverless function"
-      * 4. Deploy via a **model serving** solution
+      * Deploy code as a "serverless function"
+      * Deploy via a **model serving** solution
   * Model serving:
       * Specialized web deployment for ML models
       * Batches request for GPU inference
@@ -192,6 +192,46 @@ Machine Learning production software requires a more diverse set of test suites 
          * Adaptive batching is useful
   * (Bonus) Deploying Jupyter Notebooks:
       * [Kubeflow Fairing](https://github.com/kubeflow/fairing) is a hybrid deployment package that let's you deploy your *Jupyter notebook* codes!
+### 4.3 Service Mesh and Traffic Routing
+* Transition from monolithic applications towards a distributed microservice architecture could be challenging.
+* A **Service mesh** (consisting of a network of microservices) reduces the complexity of such deployments, and eases the strain on development teams.
+  * [Istio](https://istio.io/): a service mesh to ease creation of  a network of deployed services with load balancing, service-to-service authentication, monitoring, with few or no code changes in service code.
+### 4.4. Monitoring:
+* Purpose of monitoring:
+   * Alerts for downtime, errors, and distribution shifts
+   * Catching service and data regressions
+* Cloud providers solutions are decent
+* [Kiali](https://kiali.io/):an observability console for Istio with service mesh configuration capabilities. It answers these questions: How are the microservices connected? How are they performing?
+
+![](./post-deploy.png)
+
+### 4.5. Deploying on Embedded and Mobile Devices
+* Main challenge: memory footprint and compute constraints
+* Solutions:
+   * Quantization
+   * Reduced model size
+      * MobileNets
+   * Knowledge Distillation
+      * DistillBERT (for NLP)
+* Embedded and Mobile Frameworks:
+   * Tensorflow Lite
+   * PyTorch Mobile
+   * Core ML
+   * ML Kit
+   * FRITZ
+   * OpenVINO
+* Model Conversion:
+   * Open Neural Network Exchange (ONNX): open-source format for deep learning models
+### 4.6. All-in-one solutions
+   * Tensorflow Extended (TFX)
+   * Michelangelo (Uber)
+   * Google Cloud AI Platform
+   * Amazon SageMaker
+   * Neptune
+   * FLOYD
+   * Paperspace
+   * Determined AI
+   * Domino data lab
 
 ## References
 - https://github.com/alirezadir/Production-Level-Deep-Learning
