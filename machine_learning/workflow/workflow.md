@@ -233,6 +233,16 @@ Machine Learning production software requires a more diverse set of test suites 
    * Determined AI
    * Domino data lab
 
+![](./infra-cmp.png)
+
+![](./tfx_config.png)
+
+![](./kubeflow_pipe.png)
+
+## Other useful links:
+* [Lessons learned from building practical deep learning systems](https://www.slideshare.net/xamat/lessons-learned-from-building-practical-deep-learning-systems)
+* [Machine Learning: The High Interest Credit Card of Technical Debt](https://ai.google/research/pubs/pub43146)
+
 ## References
 - https://github.com/alirezadir/Production-Level-Deep-Learning
 
