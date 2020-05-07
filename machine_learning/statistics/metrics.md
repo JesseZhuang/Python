@@ -35,7 +35,7 @@ With the example above, accuracy is 0.91.
 
 Accuracy alone doesn't tell the full story when you're working with a class-imbalanced data set, like this one, where there is a significant disparity between the number of positive and negative labels.
 
-## Prevision and Recall
+## Precision and Recall
 
 Unfortunately, precision and recall are often in tension. That is, improving precision typically reduces recall and vice versa.
 
